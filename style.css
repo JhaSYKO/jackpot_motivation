@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC:900|Martel:600');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(./fond_slot.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #141414;
+  font-family: 'Martel', serif;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 115px;
+  z-index: 1;
+  border-bottom: 6px solid #ffffff;
+  box-shadow: 0px 50px 100px 0px rgba(31,31,31,0.9);
+}
+
+#spindiv {
+  position: relative;
+  height: 160px;
+  width: 100vw;
+  margin-left: -50vw;
+  left: 50%;
+  z-index: 1;
+  border-top: 10px solid #ffffff;
+  box-shadow: 0px -50px 100px 0px rgba(31,31,31,0.9);
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Playfair Display SC', serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height:110px;
+  letter-spacing: 2px;
+}
+
+#stage {
+  margin: 0 auto 0;
+  width: 450px;
+  padding: 0 0 0px;
+}
+
+.perspective-on {
+  perspective: 0px; 
+}
+
+#rotate {
+  margin: 0 auto;
+  width: 450x;
+  height: 240px;
+  padding-top: 260px;
+  transform-style: preserve-3d;
+}
+
+.ring {
+  margin: 0px auto;
+  padding-left: 10px;
+  height: 100px;
+  width: 140px;
+  float: left;
+  transform-style: preserve-3d;
+}
+
+.slot {
+  position: absolute;
+  width: 130px;
+  height: 100px;
+  box-sizing: border-box;
+  color: #1b1b1b;
+  background: rgb(255, 255, 255);
+  border-left: 5px #fdfffe solid;
+  border-right: 5px #ffffff solid;
+}
+.slot:before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-left: 6px #ffffff solid;
+  border-right: 6px #ffffff solid;
+  
+}
+
+.slot p {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 100px;
+  margin: 0;
+  text-align: center;
+}
+
+.go {
+  display: block;
+  margin: 0 auto 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border: 0;
+  background: #d1c3a7;
+  color: white;
+  width: 250px;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 16px 31px;
+  margin-top: 25px;
+  border: #e0d5c0 outset 8px;
+  font-family: 'Playfair Display SC', serif;
+}
+.go:active {
+  background: #b9ad95;
+  border-style: inset;
+}
+
+label {
+  display: inline-block;
+  width: 45%;
+  text-align: center;
+}
+.tilted {
+  transform: rotateY(45deg);
+}
+
+
+.spin-0 {
+  transform: rotateX(-3719deg);
+}
+.spin-1 {
+  transform: rotateX(-3749deg);
+}
+.spin-2 {
+  transform: rotateX(-3779deg);
+}
+.spin-3 {
+  transform: rotateX(-3809deg);
+}
+.spin-4 {
+  transform: rotateX(-3839deg);
+}
+.spin-5 {
+  transform: rotateX(-3869deg);
+}
+.spin-6 {
+  transform: rotateX(-3899deg);
+}
+.spin-7 {
+  transform: rotateX(-3929deg);
+}
+.spin-8 {
+  transform: rotateX(-3959deg);
+}
+.spin-9 {
+  transform: rotateX(-3989deg);
+}
+.spin-10 {
+  transform: rotateX(-4019deg);
+}
+.spin-11 {
+  transform: rotateX(-4049deg);
+}
+/*=====*/
+@keyframes back-spin {
+  0%   {
+    transform: rotateX(0deg);
+}
+  100% {
+    transform: rotateX(30deg);
+  }
+}
+@keyframes tiltin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(45deg);
+  }
+}
+@keyframes tiltout {
+  0% {
+    transform: rotateY(45deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes spin-0 {
+  0% {
+    transform: rotateX(30deg);
+  }
+  100% {
+    transform: rotateX(-3719deg);
+  }
+}
+@keyframes spin-1 {
+  0% {
+    transform: rotateX(30deg);
+  }
+  100% {
+    transform: rotateX(-3749deg);
+  }
+}
+@keyframes spin-2 {
+  0% {
+    transform: rotateX(30deg);
+  }
+  100% {
+    transform: rotateX(-3779deg);
+  }
+}
+@keyframes spin-3 {
+  0% {
+    transform: rotateX(30deg);
+  }
+  100% {
+    transform: rotateX(-3809deg);
+  }
+}
+@keyframes spin-4 {
+  0% {
+    transform: rotateX(30deg);
+  }
+  100% {
+    transform: rotateX(-3839deg);
+  }
+}
+@keyframes spin-5 {
+  0% {
+    transform: rotateX(30deg);
+  }
+  100% {
+    transform: rotateX(-3869deg);
+  }
+}
+@keyframes spin-6 {
+  0% {
+    transform: rotateX(30deg);
+  }
+  100% {
+    transform: rotateX(-3899deg);
+  }
+}
+@keyframes spin-7 {
+  0% {
+    transform: rotateX(30deg);
+  }
+  100% {
+    transform: rotateX(-3929deg);
+  }
+}
+@keyframes spin-8 {
+  0% {
+    transform: rotateX(30deg);
+  }
+  100% {
+    transform: rotateX(-3959deg);
+  }
+}
+@keyframes spin-9 {
+  0% {
+    transform: rotateX(30deg);
+  }
+  100% {
+    transform: rotateX(-3989deg);
+  }
+}
+@keyframes spin-10 {
+  0% {
+    transform: rotateX(30deg);
+  }
+  100% {
+    transform: rotateX(-4019deg);
+  }
+}
+@keyframes spin-11 {
+  0% {
+    transform: rotateX(30deg);
+  }
+  100% {
+    transform: rotateX(-4049deg);
+  }
+}
