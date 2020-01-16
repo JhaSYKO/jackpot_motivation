@@ -1,4 +1,4 @@
-const slots = [
+var slots = [
     { 
       id: "ring1",
       list: ["Faire", "Jouer", "Parler", "Se concentrer", "Arreter", "Partir", "Revenir", "Recevoir", "Donner", "Ecrire", "Voyager", "Aller"]
@@ -15,15 +15,14 @@ const slots = [
     }
     ]
     
-    const slotsPerReel = 12;
+    var slotsPerReel = 12;
     reelRadius = 187;
     
     function createSlots(ring, num) {
-      const slotAngle = 360 / slotsPerReel;
-      let seed = getSeed();
+      var slotAngle = 360 / slotsPerReel;
     
       for (let i = 0; i < slotsPerReel; i++) {
-        const slot = document.createElement("div");
+        var slot = document.createElement("div");
     
         slot.className = "slot";
     
@@ -43,11 +42,11 @@ const slots = [
       for (let i = 1; i < 4; i++) {
         let seed = getSeed();
     
-        const el = document.getElementById("ring" + i)
-        el.style.animation = (
+        var elem = document.getElementById("ring" + i)
+        elem.style.animation = (
             "back-spin 1s, spin-" + seed + " " + (timer + i * 0.5) + "s"
         );
-        el.setAttribute("class", "ring spin-" + seed);
+        elem.setAttribute("class", "ring spin-" + seed);
       }
     }
     
@@ -56,7 +55,7 @@ const slots = [
     createSlots(document.getElementById("ring3"),2);
     spin(2);
     
-    const button = document.getElementById("spinbtn");
+    var button = document.getElementById("spinbtn");
     button.addEventListener("click", () => {
       let timer = 2;
       spin(timer);
